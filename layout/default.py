@@ -19,7 +19,7 @@ header_left = dmc.Center(
         children=[
             dmc.MediaQuery(
                 dmc.Text(
-                    "EasyBOM",
+                    "b0m",
                     size="xl",
                     color="gray"
                 ),
@@ -28,7 +28,7 @@ header_left = dmc.Center(
             ),
             dmc.MediaQuery(
                 dmc.Text(
-                    "EasyBOM Builder",
+                    "b0m Builder",
                     size="xl",
                     color="gray"
                 ),
