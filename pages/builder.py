@@ -11,6 +11,11 @@ from dash import callback
 
 from dash_iconify import DashIconify
 
+from utils.lineitem import LineItem
+from utils.lineitem import Unit
+from utils.lineitem import Classification
+from utils.nexar import NexarLifeCycle
+
 modal_add_item = dmc.Modal(
     id="modal-add-item",
     title="Add Item",
@@ -35,9 +40,7 @@ modal_add_item = dmc.Modal(
         dmc.Divider(style={"height": 20}),
         dmc.Select(
             id="classification",
-            label="Classifiction",
-            searchable=False,
-            clearable=False
+            label="Classifiction"
         ),
         dmc.TextInput(
             id="mpn",
@@ -59,9 +62,6 @@ modal_add_item = dmc.Modal(
         dmc.Select(
             id="unit",
             label="Unit",
-            searchable=True,
-            clearable=False,
-            nothingFound="No options found",
             value="Each"
         ),
         dmc.Space(h=20),
