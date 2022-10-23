@@ -18,6 +18,24 @@ modal_add_item = dmc.Modal(
     children=[
         dmc.Text(""),
         dmc.Space(h=20),
+        dmc.Select(
+            id="nexar-search",
+            searchable=True,
+            clearable=True,
+            placeholder="Search...",
+            nothingFound="No match found",
+            icon=[
+                DashIconify(
+                    icon="radix-icons:magnifying-glass"
+                )
+            ],
+        ),
+        dmc.NumberInput(
+            id="quantity",
+            label="Quantity",
+            value=1
+        ),
+        dmc.Space(h=20),
         dmc.Group(
             position="right",
             children=[
