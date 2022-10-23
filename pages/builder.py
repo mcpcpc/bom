@@ -61,7 +61,8 @@ modal_add_item = dmc.Modal(
             label="Unit",
             searchable=True,
             clearable=False,
-            nothingFound="No options found"
+            nothingFound="No options found",
+            value="Each"
         ),
         dmc.Space(h=20),
         dmc.Group(
