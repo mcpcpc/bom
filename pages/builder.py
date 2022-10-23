@@ -37,7 +37,6 @@ modal_add_item = dmc.Modal(
                 )
             ],
         ),
-        dmc.Divider(style={"height": 20}),
         dmc.Select(
             id="classification",
             label="Classifiction"
@@ -57,6 +56,7 @@ modal_add_item = dmc.Modal(
         dmc.NumberInput(
             id="quantity",
             label="Quantity",
+            min=0,
             value=1
         ),
         dmc.Select(
@@ -103,4 +103,3 @@ dash.register_page(
     prevent_initial_call=True)
 def modal_add_item_update(n_clicks, opened):
     return not opened
-    
