@@ -23,7 +23,7 @@ modal_add_item = dmc.Modal(
             children=[
                 dmc.Button(
                     id="add-item",
-                    children="Add Item"
+                    children="Add"
                 )
             ] 
         )

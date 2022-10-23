@@ -60,7 +60,7 @@ header_right = dmc.Group(
         dmc.ThemeSwitcher(
             id="color-scheme-toggle",
             style=dict(cursor="pointer"),
-        ),
+        )
     ]
 )
 
@@ -73,8 +73,14 @@ def header(data):
             dmc.Container(
                 fluid=True,
                 children=[
-                    header_left,
-                    header_right
+                    dmc.Group(
+                        position="apart",
+                        align="flex-start",
+                        children=[
+                            header_left,
+                            header_right
+                        ]
+                    )  
                 ]
             ) 
         ]
