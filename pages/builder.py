@@ -20,7 +20,8 @@ modal_add_item = dmc.Modal(
         dmc.Space(h=20),
         dmc.Select(
             id="nexar-search",
-            label="Search Database",
+            label="Search NEXAR Database",
+            description="Automatically populate the line item parameters based NEXAR database search results.",
             searchable=True,
             clearable=True,
             placeholder="Search MPN...",
