@@ -20,9 +20,10 @@ modal_add_item = dmc.Modal(
         dmc.Space(h=20),
         dmc.Select(
             id="nexar-search",
+            label="Search Database",
             searchable=True,
             clearable=True,
-            placeholder="Search...",
+            placeholder="Search MPN...",
             nothingFound="No match found",
             icon=[
                 DashIconify(
@@ -34,6 +35,19 @@ modal_add_item = dmc.Modal(
             id="quantity",
             label="Quantity",
             value=1
+        ),
+        dmc.Select(
+            id="unit",
+            label="Unit",
+            searchable=True,
+            clearable=False,
+            nothingFound="No options found"
+        ),
+        dmc.Select(
+            id="classification",
+            label="Classifiction",
+            searchable=False,
+            clearable=False
         ),
         dmc.Space(h=20),
         dmc.Group(
