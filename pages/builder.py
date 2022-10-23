@@ -32,6 +32,20 @@ modal_add_item = dmc.Modal(
                 )
             ],
         ),
+        dmc.Select(
+            id="classification",
+            label="Classifiction",
+            searchable=False,
+            clearable=False
+        ),
+        dmc.TextInput(
+            id="mpn",
+            label="Manufacturing Part Number"
+        ),
+        dmc.TextInput(
+            id="description",
+            label="Description"
+        ),
         dmc.NumberInput(
             id="quantity",
             label="Quantity",
@@ -43,12 +57,6 @@ modal_add_item = dmc.Modal(
             searchable=True,
             clearable=False,
             nothingFound="No options found"
-        ),
-        dmc.Select(
-            id="classification",
-            label="Classifiction",
-            searchable=False,
-            clearable=False
         ),
         dmc.Space(h=20),
         dmc.Group(
