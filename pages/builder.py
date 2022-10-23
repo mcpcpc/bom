@@ -43,6 +43,10 @@ modal_add_item = dmc.Modal(
             label="Manufacturing Part Number"
         ),
         dmc.TextInput(
+            id="manufacturer",
+            label="Manufacturer"
+        ),
+        dmc.TextInput(
             id="description",
             label="Description"
         ),
