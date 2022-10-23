@@ -32,7 +32,7 @@ modal_add_item = dmc.Modal(
                 )
             ],
         ),
-        dmc.Divider(),
+        dmc.Divider(style={"height": 20}),
         dmc.Select(
             id="classification",
             label="Classifiction",
