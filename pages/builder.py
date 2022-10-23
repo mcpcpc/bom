@@ -16,7 +16,7 @@ modal_add_item = dmc.Modal(
     title="Add Item",
     centered=True,
     children=[
-        dmc.Text(""),
+        dmc.Text("Inserts a new line item into the current bill of material."),
         dmc.Space(h=20),
         dmc.Select(
             id="nexar-search",
