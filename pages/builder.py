@@ -142,7 +142,7 @@ def modal_manualadd_item_update(n_clicks, opened):
     return not opened
 
 @callback(
-    Output("nexar-search","data")
+    Output("nexar-search","data"),
     Input("nexar-search","value"))
 def nexar_search_update(value):
     nc = NexarClient(
