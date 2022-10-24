@@ -24,20 +24,6 @@ modal_add_item = dmc.Modal(
         dmc.Text("Inserts a new line item into the current bill of material."),
         dmc.Space(h=20),
         dmc.Select(
-            id="nexar-search",
-            label="Search NEXAR Database",
-            description="Automatically populate the line item parameters based NEXAR database search results.",
-            searchable=True,
-            clearable=True,
-            placeholder="Search MPN...",
-            nothingFound="No match found",
-            icon=[
-                DashIconify(
-                    icon="radix-icons:magnifying-glass"
-                )
-            ],
-        ),
-        dmc.Select(
             id="classification",
             label="Classification"
         ),
@@ -50,6 +36,20 @@ modal_add_item = dmc.Modal(
             id="child",
             label="Child",
             min=0
+        ),
+        dmc.Select(
+            id="nexar-search",
+            label="Search NEXAR Database",
+            description="Automatically populate the line item parameters based NEXAR database search results.",
+            searchable=True,
+            clearable=True,
+            placeholder="Search MPN...",
+            nothingFound="No match found",
+            icon=[
+                DashIconify(
+                    icon="radix-icons:magnifying-glass"
+                )
+            ],
         ),
         dmc.TextInput(
             id="mpn",
