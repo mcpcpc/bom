@@ -39,7 +39,7 @@ modal_add_item = dmc.Modal(
         ),
         dmc.Select(
             id="classification",
-            label="Classifiction"
+            label="Classification"
         ),
         dmc.NumberInput(
             id="parent",
