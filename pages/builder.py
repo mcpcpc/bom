@@ -41,6 +41,16 @@ modal_add_item = dmc.Modal(
             id="classification",
             label="Classifiction"
         ),
+        dmc.NumberInput(
+            id="parent",
+            label="Parent",
+            min=0
+        ),
+        dmc.NumberInput(
+            id="child",
+            label="Child",
+            min=0
+        ),
         dmc.TextInput(
             id="mpn",
             label="Manufacturing Part Number"
