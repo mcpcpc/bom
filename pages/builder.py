@@ -138,7 +138,7 @@ dash.register_page(
 def modal_manualadd_item_update(n_clicks, opened):
     return not opened
 
- @callback(
+@callback(
     Output("modal-automatic-add-item", "opened"),
     Input("open-modal-automatic-add-item", "n_clicks"),
     State("modal-automatic-add-item", "opened"),
