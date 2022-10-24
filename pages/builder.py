@@ -17,8 +17,8 @@ from utils.lineitem import Classification
 from utils.nexar import NexarLifeCycle
 
 modal_automatic_add_item = dmc.Modal(
-    id="modal-manual-add-item",
-    title="Manually Add Item",
+    id="modal-automatic-add-item",
+    title="Automatically Add Item",
     centered=True,
     children=[
         dmc.Select(
