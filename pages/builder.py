@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from os import getenv
+
 import dash
 import dash_mantine_components as dmc
 
@@ -15,6 +17,9 @@ from utils.lineitem import LineItem
 from utils.lineitem import Unit
 from utils.lineitem import Classification
 from utils.nexar import NexarLifeCycle
+
+IDENTITY = getenv("BOM_IDENTITY")
+SECRET = getenv("BOM_SECRET")
 
 modal_automatic_add_item = dmc.Modal(
     id="modal-automatic-add-item",
@@ -135,3 +140,25 @@ def modal_manualadd_item_update(n_clicks, opened):
     prevent_initial_call=True)
 def modal_manualadd_item_update(n_clicks, opened):
     return not opened
+
+@callback(
+    Output("nexar-search","data")
+    Input("nexar-search","value"))
+def nexar_search_update(value):
+    nc = NexarClient(
+        identity=IDENTITY,
+        secret=SECRET
+    )
+    nlc = NexarLifeCycle(nc)
+    results = nlc.search(value)
+    data = [
+        dict(
+            label=y["part"]["shortDescription"],
+            value=y["part"]["mpn"]
+        ) for y in data
+    ]
+    return data
+    
+    
+    
+     
