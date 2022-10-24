@@ -21,11 +21,10 @@ modal_automatic_add_item = dmc.Modal(
     title="Automatically Add Item",
     centered=True,
     children=[
-        dmc.Text("Automatically populate the line item parameters based NEXAR database search results."),
-        dmc.Space(h=20),
         dmc.Select(
             id="nexar-search",
             label="Manufacturer Part Number",
+            description="Automatically populate the line item parameters based NEXAR database search results.",
             searchable=True,
             clearable=True,
             placeholder="Search MPN...",
