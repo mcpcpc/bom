@@ -16,6 +16,7 @@ from dash_iconify import DashIconify
 from utils.lineitem import LineItem
 from utils.lineitem import Unit
 from utils.lineitem import Classification
+from utils.nexar import NexarClient
 from utils.nexar import NexarLifeCycle
 
 IDENTITY = getenv("BOM_IDENTITY")
