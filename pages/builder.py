@@ -144,7 +144,8 @@ def modal_manualadd_item_update(n_clicks, opened):
 
 @callback(
     Output("nexar-search","data"),
-    Input("nexar-search","value"))
+    Input("nexar-search","value"),
+    prevent_initial_call=True)
 def nexar_search_update(value):
     nc = NexarClient(
         identity=IDENTITY,
